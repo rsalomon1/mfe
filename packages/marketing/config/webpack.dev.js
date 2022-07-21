@@ -18,12 +18,12 @@ const devConfig = {
 
         new ModuleFederationPlugin({
             name: 'marketing',
-            filename: './src/bootstrap',
-        //     exposes: {
-        //         './MarketingApp' : './src/bootstrap'
-        //     },
+            filename: 'remoteEntry.js',
+            exposes: {
+                './MarketingApp' : './src/bootstrap'
+            },
             
-        //     shared: packageJson.dependencies
+            shared: packageJson.dependencies
 
         }),
 
