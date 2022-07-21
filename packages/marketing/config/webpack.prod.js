@@ -7,7 +7,7 @@ const commonConfig = require('./webpack.common');
 const prodConfig = {
     mode: 'production',
     output: {
-        filename: 'bundle.js',
+        filename: 'remoteEntry.js',
         publicPath: '/marketing/latest/'
     },
     
