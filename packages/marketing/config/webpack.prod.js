@@ -7,7 +7,7 @@ const commonConfig = require('./webpack.common');
 const prodConfig = {
     mode: 'production',
     output: {
-        filename: '[name].[contenthash].js',
+        filename: 'bundle.js',
         publicPath: '/marketing/latest/'
     },
     
@@ -16,7 +16,7 @@ const prodConfig = {
         new ModuleFederationPlugin({
             name: 'marketing',
             exposes: {
-                './MarketingApp/': './src/bootstrap'
+                './MarketingApp': './src/bootstrap'
             },
 
             shared: packageJson.dependencies
